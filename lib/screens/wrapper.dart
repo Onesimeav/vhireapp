@@ -4,6 +4,8 @@ import 'package:vhireapp/models/user.dart';
 import 'package:vhireapp/screens/authentication/login_page.dart';
 import 'package:vhireapp/screens/home/home/await_get_user.dart';
 
+import 'home/home/Profile.dart';
+
 
 class Wrapper extends StatelessWidget {
   const Wrapper({super.key});
@@ -15,7 +17,7 @@ class Wrapper extends StatelessWidget {
 
     // return either signIn or home page
     if(user==null) {
-      return const LoginPage();
+      return const Profile();
     } else {
       return GetUpdateUserBeforeHome(user: user);
     }
